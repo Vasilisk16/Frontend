@@ -7,6 +7,18 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "placehold.co",
       },
+      {
+        protocol: "https",
+        hostname: "dynamic-media-cdn.tripadvisor.com",
+      },
+      {
+        protocol: "https",
+        hostname: "**.gstatic.com",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
     ],
   },
 };

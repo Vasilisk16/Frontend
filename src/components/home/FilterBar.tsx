@@ -1,7 +1,6 @@
 "use client";
 
 import { FilterChip } from "@/components/ui/FilterChip";
-import { isFilterCategorySlug } from "@/lib/search-params";
 import type { Category, Era } from "@/types/landmark";
 
 type FilterBarProps = {
@@ -21,10 +20,6 @@ export function FilterBar({
   onEraChange,
   onCategoryChange,
 }: FilterBarProps) {
-  const filterCategories = categories.filter((category) =>
-    isFilterCategorySlug(category.slug),
-  );
-
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap gap-2">
@@ -51,7 +46,7 @@ export function FilterBar({
           isActive={!selectedCategoryId}
           onClick={() => onCategoryChange(undefined)}
         />
-        {filterCategories.map((category) => (
+        {categories.map((category) => (
           <FilterChip
             key={category.id}
             label={category.name}

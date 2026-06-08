@@ -6,7 +6,7 @@ type PageStateProps = {
 export function PageLoadingState({ title, description }: PageStateProps) {
   return (
     <div className="flex flex-col items-center justify-center px-6 py-24 text-center">
-      <div className="mb-4 h-8 w-8 animate-spin rounded-full border-2 border-neutral-300 border-t-neutral-900" />
+      <div className="mb-4 h-8 w-8 animate-spin rounded-full border-2 border-neutral-300 border-t-brand-dark" />
       <h2 className="font-serif text-2xl text-neutral-900">{title}</h2>
       {description ? (
         <p className="mt-2 max-w-md text-sm text-neutral-500">{description}</p>

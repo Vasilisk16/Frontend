@@ -1,7 +1,5 @@
 import type { LandmarksQueryParams } from "@/types/landmark";
 
-const FILTER_CATEGORY_SLUGS = ["wooden", "religious", "civil"] as const;
-
 export function parseLandmarksParams(
   searchParams: Record<string, string | string[] | undefined>,
 ): LandmarksQueryParams {
@@ -46,11 +44,3 @@ export function buildLandmarksUrl(params: LandmarksQueryParams): string {
   const query = searchParams.toString();
   return query ? `/?${query}` : "/";
 }
-
-export function isFilterCategorySlug(slug: string): boolean {
-  return FILTER_CATEGORY_SLUGS.includes(
-    slug as (typeof FILTER_CATEGORY_SLUGS)[number],
-  );
-}
-
-export { FILTER_CATEGORY_SLUGS };

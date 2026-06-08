@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${lora.variable} ${sourceSans.variable} h-full`}>
-      <body className="flex min-h-full flex-col bg-white antialiased">
+      <body className="flex min-h-full flex-col bg-surface antialiased">
         <QueryProvider>
           <Navbar />
           <main className="flex-1">{children}</main>

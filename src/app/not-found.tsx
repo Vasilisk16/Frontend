@@ -11,7 +11,7 @@ export default function NotFoundPage() {
       <div className="mt-6 text-center">
         <Link
           href="/"
-          className="text-sm text-neutral-500 transition-colors hover:text-neutral-900"
+          className="text-sm text-neutral-600 transition-colors hover:text-brand-dark"
         >
           Вернуться на главную
         </Link>

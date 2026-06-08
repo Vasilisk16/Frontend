@@ -12,12 +12,12 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="border-b border-neutral-200 bg-white">
+    <header className="bg-brand-dark">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <Link href="/" className="font-serif text-xl text-neutral-900">
+        <Link href="/" className="font-serif text-xl text-white">
           <span className="font-semibold">Архангельск</span>
-          <span className="mx-2 text-neutral-400">·</span>
-          <span className="italic text-neutral-600">наследие</span>
+          <span className="mx-2 text-white/70">·</span>
+          <span className="italic text-white/90">наследие</span>
         </Link>
 
         <nav className="flex items-center gap-8">
@@ -33,8 +33,8 @@ export function Navbar() {
                 href={link.href}
                 className={`text-xs font-medium uppercase tracking-[0.2em] transition-colors ${
                   isActive
-                    ? "text-neutral-900"
-                    : "text-neutral-500 hover:text-neutral-900"
+                    ? "text-white"
+                    : "text-white/70 hover:text-white"
                 }`}
               >
                 {link.label}

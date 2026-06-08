@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { LandmarkImage } from "@/components/landmarks/LandmarkImage";
 import { LandmarkInfoTable } from "@/components/landmarks/LandmarkInfoTable";
 import { Tag } from "@/components/ui/Tag";
 import {
@@ -48,34 +48,32 @@ export function LandmarkDetail({ slug, initialData }: LandmarkDetailProps) {
       <div className="mx-auto max-w-6xl">
         <Link
           href="/"
-          className="text-sm text-neutral-500 transition-colors hover:text-neutral-900"
+          className="text-sm text-neutral-600 transition-colors hover:text-brand-dark"
         >
           ← Все объекты
         </Link>
 
-        <header className="mt-6 border-b border-neutral-200 pb-8">
+        <header className="mt-6 border-b border-neutral-300/60 pb-8">
           <h1 className="font-serif text-4xl text-neutral-900 md:text-5xl">
             {landmark.title}
           </h1>
-          <p className="mt-3 font-serif text-lg italic text-neutral-600">
+          <p className="mt-3 font-serif text-lg italic text-neutral-700">
             {landmark.subtitle}
           </p>
         </header>
 
         <div className="mt-10 grid gap-10 lg:grid-cols-2">
-          <div className="relative aspect-[4/3] bg-neutral-100">
-            <Image
+          <div className="relative aspect-[4/3] bg-surface-elevated">
+            <LandmarkImage
               src={landmark.imageUrl}
               alt={landmark.title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
               priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
 
           <div>
-            <h2 className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-neutral-500">
+            <h2 className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-neutral-600">
               Сведения об объекте
             </h2>
             <LandmarkInfoTable landmark={landmark} />
@@ -87,7 +85,7 @@ export function LandmarkDetail({ slug, initialData }: LandmarkDetailProps) {
           </div>
         </div>
 
-        <div className="mt-12 max-w-3xl space-y-6 font-serif text-base leading-8 text-neutral-700">
+        <div className="mt-12 max-w-3xl space-y-6 font-serif text-base leading-8 text-neutral-800">
           {landmark.fullDescription.split("\n\n").map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}

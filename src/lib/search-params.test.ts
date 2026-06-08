@@ -1,9 +1,5 @@
 import { describe, expect, it } from "vitest";
-import {
-  buildLandmarksUrl,
-  isFilterCategorySlug,
-  parseLandmarksParams,
-} from "@/lib/search-params";
+import { buildLandmarksUrl, parseLandmarksParams } from "@/lib/search-params";
 
 describe("parseLandmarksParams", () => {
   it("parses filters and pagination from search params", () => {
@@ -49,17 +45,5 @@ describe("buildLandmarksUrl", () => {
 
   it("returns root path without query when filters are empty", () => {
     expect(buildLandmarksUrl({ page: 1, limit: 12 })).toBe("/");
-  });
-});
-
-describe("isFilterCategorySlug", () => {
-  it("accepts supported category slugs", () => {
-    expect(isFilterCategorySlug("wooden")).toBe(true);
-    expect(isFilterCategorySlug("religious")).toBe(true);
-    expect(isFilterCategorySlug("civil")).toBe(true);
-  });
-
-  it("rejects unsupported category slugs", () => {
-    expect(isFilterCategorySlug("trade")).toBe(false);
   });
 });

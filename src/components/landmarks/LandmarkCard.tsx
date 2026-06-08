@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { LandmarkImage } from "@/components/landmarks/LandmarkImage";
 import { Tag } from "@/components/ui/Tag";
 import type { Landmark } from "@/types/landmark";
 
@@ -16,15 +16,13 @@ export function LandmarkCard({ landmark }: LandmarkCardProps) {
   return (
     <Link
       href={`/objects/${landmark.id}`}
-      className="group flex h-full flex-col overflow-hidden border border-neutral-200 bg-white transition-shadow hover:shadow-md"
+      className="group flex h-full flex-col overflow-hidden border border-neutral-200 bg-surface-elevated transition-shadow hover:shadow-md"
     >
-      <div className="relative aspect-[4/3] bg-neutral-100">
-        <Image
+      <div className="relative aspect-[4/3] bg-surface-elevated">
+        <LandmarkImage
           src={landmark.imageUrl}
           alt={landmark.title}
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="transition-transform duration-300 group-hover:scale-[1.02]"
         />
       </div>
 

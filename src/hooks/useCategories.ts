@@ -6,5 +6,6 @@ export function useCategories() {
   return useQuery({
     queryKey: queryKeys.categories(),
     queryFn: fetchCategories,
+    staleTime: 0,
   });
 }

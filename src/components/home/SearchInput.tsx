@@ -31,7 +31,7 @@ export function SearchInput({ value, onChange }: SearchInputProps) {
         value={localValue}
         onChange={(event) => setLocalValue(event.target.value)}
         placeholder="Поиск по названию..."
-        className="w-full rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm text-neutral-900 outline-none transition-colors placeholder:text-neutral-400 focus:border-neutral-500"
+        className="w-full rounded-full border border-neutral-300 bg-surface-elevated px-4 py-2 text-sm text-neutral-900 outline-none transition-colors placeholder:text-neutral-400 focus:border-brand-dark"
       />
     </div>
   );

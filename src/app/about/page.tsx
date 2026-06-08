@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="bg-[#F9F9F7] px-6 py-16">
+    <section className="px-6 py-16">
       <div className="mx-auto max-w-3xl">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-neutral-500">
           О проекте

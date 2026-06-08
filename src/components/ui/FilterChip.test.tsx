@@ -18,7 +18,7 @@ describe("FilterChip", () => {
     render(<FilterChip label="Все" isActive onClick={vi.fn()} />);
 
     expect(screen.getByRole("button", { name: "Все" })).toHaveClass(
-      "bg-neutral-900",
+      "bg-brand-dark",
     );
   });
 });
